@@ -1,0 +1,1 @@
+mustache@4.20.js is MIT license from https://unpkg.com/mustache@4.2.0

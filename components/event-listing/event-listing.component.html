@@ -1,0 +1,50 @@
+<link href="/css/style.css" rel="stylesheet" type="text/css" />
+<link href="/colors/color1.css" rel="stylesheet" type="text/css" />
+
+<div id="{{id}}" class="events-listing">
+    <div class="events-listing-header">
+        <ul class="sort-source" data-sort-id="events" data-option-key="filter">
+            <li data-option-value="*" class="active">
+                <a href="#">{{year}}</a>
+            </li>
+            <li data-option-value=".First"><a href="#">1-3月</a></li>
+            <li data-option-value=".Second"><a href="#">4-6月</a></li>
+            <li data-option-value=".Third"><a href="#">7-9月</a></li>
+            <li data-option-value=".Forth"><a href="#">10-12月</a></li>
+        </ul>
+    </div>
+    <ul class="events-listing-content sort-destination isotope-events" data-sort-id="events">
+        {{#rows}}
+        <li class="event-list-item event-dynamic grid-item {{quater}}">
+            <div class="event-list-item-date">
+                <span class="event-date">
+                    <span class="event-day">{{day}}</span>
+                    <span class="event-month">{{month}}, {{year}}</span>
+                </span>
+            </div>
+            <div class="event-list-item-info">
+                <div class="lined-info"><h4>{{title}}</h4></div>
+                <div class="lined-info event-location">
+                    <span class="meta-data"> <span class="event-location-address">{{presenter}}</span></span>
+                </div>
+            </div>
+            <div class="event-list-item-actions">
+                <a class="btn btn-default btn-transparent" href="{{url}}">下載</a>
+                <ul class="action-buttons" style="display: none; visibility: hidden; height: 0px;">
+                    <li title="Share event">
+                        <a href="#" class="event-share-link" data-trigger="focus" data-placement="top" data-content="" data-toggle="popover" data-original-title="Share Event">
+                            <i class="icon-share"></i>
+                        </a>
+                    </li>
+                    <li title="Get directions" class="hidden-xs">
+                        <a href="#" class="cover-overlay-trigger event-direction-link"><i class="icon-compass"></i></a>
+                    </li>
+                    <li title="Contact event manager">
+                        <a href="#" data-toggle="modal" data-target="#Econtact" class="event-contact-link"><i class="icon-mail"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        {{/rows}}
+    </ul>
+</div>
