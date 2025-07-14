@@ -77,6 +77,17 @@
         <div class="body">
             <!-- Start Site Header -->
             <header class="site-header">
+                <div id="cccnc_notifier">
+                    <script lang="javascript">
+                        const developmentHosts = ["cccnc-csm.github.io", "localhost", "127.0.0.1"]
+                        const currentHost = window.location.hostname;
+                        if (developmentHosts.indexOf(currentHost) > -1) {
+                            var notifierElement = document.getElementById("cccnc_notifier");
+                            notifierElement.innerHTML='<div style=" height:26px; color:red; font-size:24px;">DEVELOPMENT Site for the Official Site:<a href="http://csm.cccnc.org/">http://csm.cccnc.org/</a></div>'
+                            notifierElement.style="position:sticky; top:0px; z-index:5000; background-color:white; text-align:center; width:100%;"
+                        }
+                    </script>
+                </div>
                 <div class="container for-navi">
                     <div class="site-logo">
                         <h1>
