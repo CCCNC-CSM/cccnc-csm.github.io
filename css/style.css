@@ -4036,3 +4036,13 @@ ul.blog-classic-listing strong.post-title{
     margin: 0 auto;
     background: #eee;        /* fallback for missing images */
 }
+
+.address-heading {
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .address-heading {
+    white-space: normal;
+  }
+}
